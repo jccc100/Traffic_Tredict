@@ -176,7 +176,7 @@ def D8(predict_inerval='60'):
     pre_noTA = np.load(file_path_D8[2])
     pre_noTA=pre_noTA.swapaxes(1,2)
 
-    node = 159#126做noTA的对比 159、137,77,127做预测展示
+    node = 127#126做noTA的对比 159、137,77,127做预测展示
     day=1
     shifting=130
     drow_pred_flow_15 = pred_flow[shifting+9:day*24 * 12+shifting+9, node, 2, :]
