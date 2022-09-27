@@ -140,6 +140,8 @@ class EmbGCN(nn.Module):
         # self.SA=Spatial_Attention_layer(adj.shape[0],dim_in,dim_out)
         self.weights_pool = nn.Parameter(torch.FloatTensor(embed_dim, cheb_k, dim_in, dim_out))
         self.bias_pool = nn.Parameter(torch.FloatTensor(embed_dim, dim_out))
+        nn.init.normal_(self.weights_pool)
+        nn.init.normal_(self.bias_pool)
     def forward(self, x, node_embeddings):
         #x shaped[B, N, C], node_embeddings shaped [N, D] -> supports shaped [N, N]
         #output shape [B, N, C]
