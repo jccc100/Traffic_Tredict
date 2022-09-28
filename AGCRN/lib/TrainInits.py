@@ -6,8 +6,8 @@ def init_seed(seed):
     '''
     Disable cudnn to maximize reproducibility
     '''
-    torch.cuda.cudnn_enabled = False
-    torch.backends.cudnn.deterministic = True
+    torch.cuda.cudnn_enabled = True
+    torch.backends.cudnn.deterministic = False
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
