@@ -21,10 +21,10 @@ Mode = 'train'
 DEBUG = 'True'
 DATASET = 'PEMSD8'
 DEVICE = 'cuda:0'
-MODEL = 'AGCRN'
+MODEL = 'TARGCN'
 
 #get configuration
-config_file = './{}_{}.conf'.format(DATASET, MODEL)
+config_file = './{}.conf'.format(DATASET)
 #print('Read configuration file: %s' % (config_file))
 config = configparser.ConfigParser()
 config.read(config_file)
